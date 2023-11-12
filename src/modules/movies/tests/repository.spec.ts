@@ -6,6 +6,13 @@ const db = await createTestDatabase()
 const repository = buildRepository(db)
 const createMovies = createFor(db, 'movies')
 
+afterAll(() => db.destroy())
+
+afterEach(async () => {
+  // clearing the tested table after each test
+  await db.deleteFrom('movies').execute()
+})
+
 describe('findAll', () => {
   it('should return existing movies', async () => {
     // ARRANGE (Given that we have the following record in the database...)
