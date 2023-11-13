@@ -11,7 +11,6 @@ export default function createApp(db: Database) {
 
   app.use(express.json())
 
-  // register your controllers here
   app.use('/movies', movies(db))
 
   app.use('/screenings', screenings(db))

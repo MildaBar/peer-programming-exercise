@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-// import * as fs from 'fs'
 import { Database } from '@/database'
 import buildMoviesRepository from '@/modules/movies/repository'
 import createDatabase from '@/database/index'

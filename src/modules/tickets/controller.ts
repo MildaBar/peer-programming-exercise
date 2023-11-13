@@ -1,5 +1,4 @@
 import { Router } from 'express'
-// import { omit } from 'lodash/fp'
 import { StatusCodes } from 'http-status-codes'
 import type { Database } from '@/database'
 import { jsonRoute } from '@/utils/middleware'
