@@ -6,7 +6,6 @@ import { movieFactory } from '@/modules/movies/tests/utils'
 
 const db = await createTestDatabase()
 const repository = buildRepository(db)
-// const createScreening = createFor(db, 'screenings')
 const createMovies = createFor(db, 'movies')
 const selectScreenings = selectAllFor(db, 'screenings')
 

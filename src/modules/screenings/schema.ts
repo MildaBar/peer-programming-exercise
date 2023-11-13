@@ -11,14 +11,6 @@ const schema = z.object({
   createdAt: z.string(),
 })
 
-/*
-INSERT INTO screenings (number_of_tickets, number_of_tickets_left, movie_title, movie_year) VALUES (100, 80, 'The Matrix', 1999);
-  numberOfTickets: 100,
-  numberOfTicketsLeft: 80,
-  movieTitle: 'The Matrix',
-  movieYear: 1999,
-*/
-
 const insertable = schema.omit({ id: true })
 
 const updateable = insertable.partial()

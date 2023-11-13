@@ -9,6 +9,7 @@ import * as schema from './schema'
 
 export default (db: Database) => {
   const screenings = buildRespository(db)
+
   const router = Router()
 
   router
@@ -48,6 +49,7 @@ export default (db: Database) => {
           const result = await screenings.create(body)
           return res.status(StatusCodes.CREATED).json(result)
         } catch (error) {
+          // eslint-disable-next-line no-console
           console.error('Error occured during screenings creation:', error)
           return res.status(500).json({ error: 'Internal Server Error.' })
         }
@@ -76,6 +78,7 @@ export default (db: Database) => {
             .status(StatusCodes.OK)
             .json({ message: 'Screenings data deleted.' })
         } catch (error) {
+          // eslint-disable-next-line no-console
           console.error('Error occurred during screenings removement:', error)
           return res.status(500).json({ error: 'Internal Server Error.' })
         }

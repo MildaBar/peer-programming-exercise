@@ -42,6 +42,15 @@ export interface Stars {
   personId: number;
 }
 
+export interface Tickets {
+  id: Generated<number>;
+  userId: number;
+  movieId: number;
+  screeningId: number;
+  numTickets: number;
+  bookingTimestamp: Generated<string>;
+}
+
 export interface DB {
   directors: Directors;
   movies: Movies;
@@ -49,4 +58,5 @@ export interface DB {
   ratings: Ratings;
   screenings: Screenings;
   stars: Stars;
+  tickets: Tickets;
 }
